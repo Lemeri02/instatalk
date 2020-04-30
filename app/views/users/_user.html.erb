@@ -1,4 +1,6 @@
-<li data-user-id="<%= user.id %>" data-user-status="<%= user.status %>">
-  <b><%= user.nickname %></b>
-  <span class="spinner-grow spinner-grow-sm text-success">&#183;</span>
-</li>
+<% if user.status %>
+  <li data-user-id="<%= user.id %>" data-user-status="<%= user.status %>">
+    <b><%= user.nickname %></b>
+    <span class="spinner-grow spinner-grow-sm text-success">&#183;</span>
+  </li>
+<% end %>
