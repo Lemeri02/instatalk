@@ -1,24 +1,37 @@
-# README
+# Анонимный чат Instatalk
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Приложение для чата
 
-Things you may want to cover:
+### Демо версия
 
-* Ruby version
+Демо версия доступна по адресу
+* [goodp-chat.herokuapp.com/](https://goodp-chat.herokuapp.com/)
 
-* System dependencies
+## Установка
+```
+bundle install
 
-* Configuration
+yarn install 
 
-* Database creation
+rails db:migrate
+```
 
-* Database initialization
+## Запуск
+Выполните ```rails s```
 
-* How to run the test suite
+## Настройка
+В системе должен быть установлен и настроен `Redis`
 
-* Services (job queues, cache servers, search engines, etc.)
+Для деплоя необходимо прописать URL адаптера `config/cable.yml`
 
-* Deployment instructions
+```
+production:
+  adapter: redis
+  url: <ваш_URL>
+  channel_prefix: instatalk_production
+```
 
-* ...
+## Автор
+
+* **Хороший программист**
+* **LEM** - *Учебный проект* - [Lemeri](https://github.com/Lemeri02)
